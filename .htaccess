@@ -1,0 +1,9 @@
+#RewriteEngine on #rewriteengine为重写引擎开关on为开启off为关闭
+#RewriteCond $1 !^(index.php\.php|images|robots\.txt)
+#RewriteRule ([a-zA-Z]{1,})/([0-9]{1,})$ sharexie/test.php?m=$1&a=$2
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?/$1 [QSA,PT,L]
+</IfModule>

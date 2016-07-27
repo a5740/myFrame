@@ -1,0 +1,1 @@
+简单的MVC框架 仅供学习 smarty 放入 Core/smarty 即可
